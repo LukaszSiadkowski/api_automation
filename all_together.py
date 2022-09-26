@@ -104,8 +104,8 @@ crashed['zzzzzzzzzzzzz'] = crashed['zzzzzzzzzzzzzzzzzzzzzzzz']*1.1
 crashed['zzzzzzzzzzzzzzzzzzzzz'] = crashed['zzzzzzzzzzzzzzzzzzz'].round(decimals=2)
 
 
-crashed.to_csv('crashed.csv', index=False, encoding='utf-8')
 
+crashed.to_csv('crashed.csv', index=False, encoding='utf-8')
 
 #importing file
 s=Service('xxxxxxxx/chromedriver.exe')
@@ -143,7 +143,6 @@ for x in range(0,len(like)):
         break
         
 time.sleep(10)
-
         
 fileInput = browser.find_element(By.XPATH, "//input[@type='file']").send_keys("xxxxxxxxxxxxxxx/crashed.csv")
 
@@ -154,7 +153,6 @@ overwrite.click()
 
 time.sleep(5)
 
-
 upload = browser.find_elements(By.CLASS_NAME, 'Polaris-Button__Text_yj3uv')
 for x in range(0,len(like)):
     if upload[12].is_displayed():
@@ -162,8 +160,7 @@ for x in range(0,len(like)):
         break
         
 time.sleep(5)
-
-        
+     
 upload2 = browser.find_elements(By.CLASS_NAME, 'Polaris-Button__Text_yj3uv')
 for x in range(0,len(like)):
     if upload2[11].is_displayed():
@@ -173,7 +170,6 @@ for x in range(0,len(like)):
 time.sleep(180)
 
 #second file
-
 like = browser.find_elements(By.CLASS_NAME, 'Polaris-Button__Text_yj3uv')
 for x in range(0,len(like)):
     if like[1].is_displayed():
