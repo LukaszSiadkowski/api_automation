@@ -64,12 +64,14 @@ new_df = new_df[new_df["xxxxxxxxx"].str.contains("xxxxxxx") == False]
 
 new_df['aaaaaaaaaa']=new_df['Title']
 
-new_df.drop_duplicates(subset ="Title", keep = 'last', inplace = True)
 
 new_df['zzzzzzzzzzzzzzzz'] = new_df['Variant']
 new_df['zzzzzzzzzzzzzzz'] = pd.to_numeric(new_df['zzzzzzzzzzzzzzzzzz'])
 new_df['zzzzzzzzzzzzz'] = new_df['zzzzzzzzzzzzzzzzzzzzzz']*1.1
 new_df['zzzzzzzzzzzz'] = new_df['zzzzzzzzzzzzzzzzzzzz'].round(decimals=2)
+
+new_df.drop_duplicates(subset ="Title", keep = 'last', inplace = True)
+
 
 new_df.to_csv('prepared.csv', index=False, encoding='utf-8')
 
